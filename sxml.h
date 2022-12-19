@@ -25,7 +25,7 @@ typedef enum
 /*
  You provide sxml_parse() with a buffer of XML text for parsing.
  The parser will handle text data encoded in ascii, latin-1 and utf-8.
- It should also work with other encodings that are acsii extensions.
+ It should also work with other encodings that are ascii extensions.
 
  sxml_parse() is reentrant.
  In the case of return code SXML_ERROR_BUFFERDRY or SXML_ERROR_TOKENSFULL, you are expected to call the function again after resolving the problem to continue parsing.
@@ -39,7 +39,7 @@ sxmlerr_t sxml_parse(sxml_t *parser, const char *buffer, unsigned bufferlen, sxm
  The sxml_t object stores all data required for SXML to continue from where it left of.
 
  After calling sxml_parse() 'ntokens' tells you how many output tokens have been filled with data.
- Depending on how you resolve SXML_ERROR_BUFFERDRY or SXML_ERROR_TOKENSFULL you may need to modifiy 'bufferpos' and 'ntokens' to correctly reflect the new buffer and tokens you provide.
+ Depending on how you resolve SXML_ERROR_BUFFERDRY or SXML_ERROR_TOKENSFULL you may need to modify 'bufferpos' and 'ntokens' to correctly reflect the new buffer and tokens you provide.
 */
 
 struct sxml_t
